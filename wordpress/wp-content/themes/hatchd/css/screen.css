@@ -17,6 +17,37 @@
 /*
  * FONTS
  */
+h1 {
+  font-family: "Lobster", cursive;
+  font-weight: 400;
+  font-size: 160%; }
+
+h2, h2 *,
+h3, h3 *,
+h4, h4 *,
+h5, h5 *
+h6, h6 * {
+  font-family: "Source Sans Pro", Arial, Helvetica, sans-serif;
+  font-weight: 300; }
+
+h2 {
+  font-size: 150%; }
+
+h2 {
+  font-size: 140%; }
+
+h3 {
+  font-size: 130%; }
+
+h4 {
+  font-size: 120%; }
+
+h5 {
+  font-size: 110%; }
+
+h6 {
+  font-size: 100%; }
+
 /*
  * IMAGES
  */
@@ -76,7 +107,7 @@ nav#mainNav {
   position: fixed;
   top: 0px;
   left: -250px;
-  font-family: "Lato", Helvetica, Arial, sans-serif;
+  font-family: "Lobster", cursive;
   text-transform: uppercase;
   z-index: 50;
   -webkit-transition: all 0.5s;
@@ -390,7 +421,7 @@ header {
     #sideBar .pod .podContent {
       border: 2px solid #dd6c5c;
       border-top: none;
-      font-family: "Lato", Helvetica, Arial, sans-serif;
+      font-family: "Lobster", cursive;
       display: none; }
       #sideBar .pod .podContent ul {
         padding: 0px;
@@ -430,7 +461,7 @@ header {
  * BREAD
  */
 #bread {
-  font-family: "Lato", Helvetica, Arial, sans-serif;
+  font-family: "Lobster", cursive;
   text-transform: uppercase;
   margin: 0 0 10px 0;
   position: relative;
@@ -438,8 +469,7 @@ header {
   #bread li {
     padding: 0px; }
     #bread li span {
-      color: #333;
-      font-weight: 900; }
+      color: #333; }
     #bread li a {
       color: #333 !important; }
     #bread li .active {
@@ -521,7 +551,7 @@ header {
   -o-border-radius: 0px;
   border-radius: 0px;
   cursor: pointer;
-  font-family: "Lato", Helvetica, Arial, sans-serif;
+  font-family: "Lobster", cursive;
   text-transform: uppercase;
   -webkit-box-shadow: none !important;
   -moz-box-shadow: none !important;
@@ -558,7 +588,7 @@ body#hatchd .gform_wrapper {
 
 form,
 body#hatchd .gform_wrapper form {
-  font-family: "Lato", Helvetica, Arial, sans-serif;
+  font-family: "Lobster", cursive;
   margin: 0 0 30px 0; }
   form .gform_heading,
   body#hatchd .gform_wrapper form .gform_heading {
@@ -616,8 +646,8 @@ body#hatchd .gform_wrapper form {
     top: 3px; }
   form .gfield_checkbox label,
   body#hatchd .gform_wrapper form .gfield_checkbox label {
-    font-family: "Playfair Display", serif;
-    font-weight: 400; }
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal; }
   form .validation_message,
   form .validation_error,
   body#hatchd .gform_wrapper form .validation_message,
@@ -698,7 +728,7 @@ body#hatchd .gform_wrapper form {
  * TABS
  */
 .tabs .nav-tabs {
-  font-family: "Lato", Helvetica, Arial, sans-serif;
+  font-family: "Lobster", cursive;
   text-transform: uppercase; }
   .tabs .nav-tabs a {
     background: blue;
@@ -728,7 +758,7 @@ footer {
     color: blue;
     padding: 10px 0;
     margin: 100px 0 0 0;
-    font-family: "Lato", Helvetica, Arial, sans-serif;
+    font-family: "Lobster", cursive;
     font-size: 80%; }
     footer .subFooter .copyright {
       padding: 5px;
@@ -803,7 +833,7 @@ smartphones portrait.
       #sideBar .pod .podContent {
         display: block !important;
         height: auto !important;
-        font-family: "Playfair Display", serif;
+        font-family: Arial, Helvetica, sans-serif;
         color: #333;
         border: none; }
         #sideBar .pod .podContent ul li a {

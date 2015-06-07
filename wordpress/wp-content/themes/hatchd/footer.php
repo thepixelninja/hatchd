@@ -34,7 +34,7 @@
 
 <div id="layoutDetector" class="hidden-xs hidden-sm"></div>
 
-<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:400,300,900|Playfair+Display:400,400italic,700,700italic" type="text/css"/>
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lobster|Source+Sans+Pro:400,300,600,300italic,400italic,600italic" type="text/css"/>
 <link rel="stylesheet" href="<?php echo $C->themePath(); ?>/functions/min/?g=css" type="text/css"/>
 
 <script type="text/javascript">

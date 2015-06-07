@@ -10,13 +10,17 @@
  */
 
 /*-----fonts-----*/
-$headingFont    : "Lato",Helvetica,Arial,sans-serif;
-$headingBold    : 900;
+$headingFont    : "Lobster",cursive;
 $headingRegular : 400;
-$headingLight   : 300;
-$bodyFont       : "Playfair Display",serif;
-$bodyBold       : 700;
-$bodyRegular    : 400;
+
+$subHeaingFont      : "Source Sans Pro",Arial,Helvetica,sans-serif;
+$subHeadingBold     : 600;
+$subHeadingRegular  : 400;
+$subHeadingLight    : 300;
+
+$bodyFont       : Arial,Helvetica,sans-serif;
+$bodyBold       : bold;
+$bodyRegular    : normal;
 
 /*-----colors-----*/
 $primaryBrandColor      : #dd6c5c;
@@ -108,6 +112,44 @@ $layer6 : 50;
  * FONTS
  */
 
+ h1 {
+   font-family:$headingFont;
+   font-weight:$headingRegular;
+   font-size:160%;
+ }
+
+h2,h2 *,
+h3,h3 *,
+h4,h4 *,
+h5,h5 *
+h6,h6 * {
+  font-family:$subHeaingFont;
+  font-weight:$subHeadingLight;
+}
+
+h2 {
+  font-size:150%;
+}
+
+h2 {
+  font-size:140%;
+}
+
+h3 {
+  font-size:130%;
+}
+
+h4 {
+  font-size:120%;
+}
+
+h5 {
+  font-size:110%;
+}
+
+h6 {
+  font-size:100%;
+}
 
 /*
  * IMAGES
@@ -609,7 +651,6 @@ header {
     padding:0px;
     span {
       color:$darkColor;
-      font-weight:$headingBold;
     }
     a {
       color:$darkColor !important;
