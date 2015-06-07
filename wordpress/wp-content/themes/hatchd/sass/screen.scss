@@ -13,7 +13,7 @@
 $headingFont    : "Lobster",cursive;
 $headingRegular : 400;
 
-$subHeaingFont      : "Source Sans Pro",Arial,Helvetica,sans-serif;
+$subHeadingFont     : "Source Sans Pro",Arial,Helvetica,sans-serif;
 $subHeadingBold     : 600;
 $subHeadingRegular  : 400;
 $subHeadingLight    : 300;
@@ -29,11 +29,9 @@ $primaryBrandColorLowlight      : #ca5a4a;
 $secondaryBrandColor            : #45626A;
 $secondaryBrandColorLowlight    : #314b52;
 
-$lightColor             : #fde9d6;
-$darkColor              : #333;
-
-$darkColorHighlight : red;
-$lightGrey          : blue;
+$lightColor         : #f8f3ef;
+$darkColor          : #333;
+$lightGrey          : #f1f1f1;
 
 /*-----z-indexes-----*/
 $layer1 : 1;
@@ -135,7 +133,7 @@ $layer6 : 50;
 h1 {
   font-family:$headingFont;
   font-weight:$headingRegular;
-  font-size:160%;
+  font-size:200%;
 }
 
 h2,h2 *,
@@ -143,28 +141,24 @@ h3,h3 *,
 h4,h4 *,
 h5,h5 *
 h6,h6 * {
-  font-family:$subHeaingFont;
+  font-family:$subHeadingFont;
   font-weight:$subHeadingLight;
 }
 
 h2 {
-  font-size:150%;
-}
-
-h2 {
-  font-size:140%;
+  font-size:180%;
 }
 
 h3 {
-  font-size:130%;
+  font-size:160%;
 }
 
 h4 {
-  font-size:120%;
+  font-size:140%;
 }
 
 h5 {
-  font-size:110%;
+  font-size:120%;
 }
 
 h6 {
@@ -180,6 +174,14 @@ img {
   height:auto;
   display:block;
   max-width:100%;
+}
+
+/*
+ * LINKS
+ */
+
+a,a:visited,a:hover,a:active {
+  color:$primaryBrandColor;
 }
 
 /*
@@ -252,6 +254,14 @@ body {
   z-index:$layer4;
 }
 
+.date {
+  span {
+    margin:0 5px 0 0;
+    color:$secondaryBrandColor;
+    font-family:$subHeadingFont;
+  }
+}
+
 /*
  * MAIN NAV
  */
@@ -264,7 +274,7 @@ nav#mainNav {
   position:fixed;
   top:0px;
   left:-250px;
-  font-family:$subHeaingFont;
+  font-family:$subHeadingFont;
   text-transform:uppercase;
   z-index:$layer6;
   @include transition-all(0.5s);
@@ -355,14 +365,14 @@ html.navOpen {
 .socialButtons {
   a {
     padding:0px;
-    margin:0 0 0 5px;
+    margin:2px 0 0 5px;
     width:30px;
     height:30px;
     float:left;
     display:block;
   }
   a:first-child {
-    margin:0px;
+    margin:2px 0 0 0;
   }
   a:before {
     line-height:1em;
@@ -404,7 +414,7 @@ header {
   #featuredImage {
     background:center center no-repeat;
     background-size:cover;
-    #paralax {
+    #innerFeatured {
       padding:20px 0;
     }
   }
@@ -447,28 +457,6 @@ header {
 }
 
 /*
- * FEATURE PAGES
- */
-
-#featuredPages {
-  background:$darkColor;
-  color:$lightColor;
-  text-align:center;
-  .featuredPage {
-    margin:0 0 30px 0;
-    padding:0 0 30px 0;
-    border-bottom:2px solid $darkColorHighlight;
-    .circleIcon:hover {
-      background:url(../images/grid.svg) no-repeat !important;
-      background-size:cover;
-    }
-  }
-  .col-md-4:last-child .featuredPage {
-    border:none;
-  }
-}
-
-/*
  * SIDEBAR
  */
 
@@ -488,6 +476,7 @@ header {
       * {
         padding:0px;
         margin:0px;
+        font-family:$headingFont;
       }
       h3:after {
         content:"✚";
@@ -506,7 +495,7 @@ header {
     .podContent {
       border:2px solid $primaryBrandColor;
       border-top:none;
-      font-family:$headingFont;
+      font-family:$subHeadingFont;
       display:none;
       ul {
         padding:0px;
@@ -550,21 +539,14 @@ header {
   }
 }
 
-#sideBar.leftSidebar {
-  border:none;
-  padding:0px;
-}
-
 /*
  * BREAD
  */
 
 #bread {
-  font-family:$headingFont;
+  font-family:$subHeadingFont;
   text-transform:uppercase;
   margin:0 0 10px 0;
-  position:relative;
-  top:-20px;
   li {
     padding:0px;
     span {
@@ -585,12 +567,10 @@ header {
 
 #mainContent {
   background:#fff;
-  margin-bottom:-100px;
   #innerMainContent {
     padding:20px;
     background:#fff;
     position:relative;
-    top:-100px;
     z-index:$layer2;
     .content {
       float:left;
@@ -602,8 +582,9 @@ header {
           margin:0px;
         }
         h1 {
-          font-size:350%;
+          font-size:400%;
           color:$primaryBrandColor;
+          margin:0 0 10px 0;
         }
         h2 {
           font-size:250%;
@@ -625,6 +606,9 @@ header {
   h1,h2,h3,h4,h5,h6 {
     margin:30px 0;
     text-transform:none;
+  }
+  a:hover {
+    text-decoration:underline;
   }
   ul,
   ol {
@@ -657,7 +641,7 @@ header {
   border:2px solid $primaryBrandColor;
   @include border-radius(0px);
   cursor:pointer;
-  font-family:$headingFont;
+  font-family:$subHeadingFont;
   text-transform:uppercase;
   @include box-shadow(none !important);
   background:none;
@@ -698,7 +682,7 @@ body#hatchd .gform_wrapper {
 
 form,
 body#hatchd .gform_wrapper form {
-  font-family:$headingFont;
+  font-family:$subHeadingFont;
   margin:0 0 30px 0;
   .gform_heading {
     display:none;
@@ -799,13 +783,15 @@ body#hatchd .gform_wrapper form {
     border-bottom:2px solid $lightGrey;
     position:relative;
     .media {
+      .media-heading {
+        font-size:250%;
+        a {
+          font-family:$headingFont;
+        }
+      }
       .thumb {
         margin:0 0 10px 0;
         display:block;
-      }
-      iframe {
-        border:1px solid $lightGrey;
-        width:100%;
       }
     }
   }
@@ -968,10 +954,19 @@ smartphones portrait.
  
   header {
     #featuredImage {
-      #paralax {
+      #innerFeatured {
         height:0px;
         padding-bottom:30%;
       }
+    }
+  }
+  
+  /*--MAIN CONTENT--*/
+ 
+  #mainContent {
+    margin-bottom:-100px;
+    #innerMainContent {
+      top:-100px;
     }
   }
 
@@ -986,11 +981,11 @@ smartphones portrait.
       margin:0 0 30px 0;
       .podTitle {
         padding:0px;
-        color:$darkColor;
         border:none;
         h3 {
           padding:0px;
           margin:0 0 10px 0;
+          font-size:200%;
         }
         h3:after {
           content:"";
@@ -1068,11 +1063,13 @@ smartphones portrait.
   }
 
   /*--EDITABLE CONTENT--*/
-
-  .editableContent {
-    @include cols(2,20px);
-    .gallery .gallery-item {
-      width:25%;
+  
+  .index, .page {
+    .editableContent {
+      @include cols(2,20px);
+      .gallery .gallery-item {
+        width:25%;
+      }
     }
   }
 

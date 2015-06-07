@@ -1,5 +1,5 @@
 # Handle home page
-Redirect 301 /home/home http://dev.local/hatchd
+Redirect 301 /hatchd/home/home http://dev.local/hatchd
 
 <IfModule mod_rewrite.c>
 RewriteEngine On

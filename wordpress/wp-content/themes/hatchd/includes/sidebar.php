@@ -12,8 +12,6 @@ $siblings = $C->pageSiblings();
 $types = $C->postTypes($pagename,0,5);
 //greb sibling types
 $siblingTypes = $C->postTypes($post->post_type,0,5);
-//grab the downloads
-$downloads = $C->pageDownloads();
 //reset all post data
 wp_reset_postdata();
 ?>
@@ -164,36 +162,5 @@ wp_reset_postdata();
 	
 	</div>
 	<?php endif; ?>
-	
-	<?php if(!empty($downloads)): ?>
-	<div class="pod navPod">
-		
-		<div class="podTitle">
-			<h3>Downloads</h3>
-		</div>
-		
-		<nav class="podContent">
-			
-			<?php foreach($downloads as $download): ?>
-			<div class="<?php echo $download["ext"]; ?> podItem">
-				<a href="<?php echo $download["file"]; ?>" data-event="true" data-goal="true" data-type="Download" data-description="<?php echo $download["title"]; ?>" title="<?php echo $download["title"]; ?>">
-					<img class="fileIcon" src="<?php echo $download["icon"]; ?>" alt="<?php echo $download["ext"]; ?> icon"/>
-					<?php echo $download["title"]; ?>
-				</a>
-			</div>
-			<?php endforeach; ?>
-			
-		</nav>
-	
-	</div>
-	<?php endif; ?>
-	
-	<?php include("stackoverflow-pod.php"); ?>
-	
-	<?php include("twitter-pod.php"); ?>
-	
-	<div class="hidden-xs hidden-sm">
-		<?php include("sidebar-bottom.php"); ?>
-	</div>
 	
 </aside>

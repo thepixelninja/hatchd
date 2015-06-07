@@ -65,13 +65,13 @@ $featuredImage = $C->pageFeatureImage(false,false,true);
 	
 	<div class="container">
 		<div class="row">
-			<div class="col-md-9 hidden-xs hidden-sm">
+			<div class="col-md-3 hidden-xs hidden-sm">
 				<a class="logo" href="<?php echo $C->sitePath(); ?>" title="<?php echo $C->siteTagline(); ?>">
 					<span><small>Best Laid</small>Plans</span>
 				</a>
 			</div>
-			<div class="col-md-3">
-				<?php echo $C->siteMenu(2,"list-unstyled"); ?>
+			<div class="col-md-9">
+				<?php echo $C->siteMenu(1,"list-unstyled"); ?>
 			</div>
 		</div>
 	</div>
@@ -96,11 +96,15 @@ $featuredImage = $C->pageFeatureImage(false,false,true);
 			</div>
 		</div>
 		
+		<?php if($featuredImage != ""): ?>
 		<div id="featuredImage" style="background-image:url(<?php echo $featuredImage; ?>);">
+		<?php else: ?>
+		<div id="featuredImage" style="background-image:url(<?php echo $C->themePath(); ?>/images/default-featured-image.jpg);">	
+		<?php endif; ?>
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12">
-						<div id="paralax">
+						<div id="innerFeatured">
 							<a class="logo visible-xs visible-sm" href="<?php echo $C->sitePath(); ?>" title="<?php echo $C->siteTagline(); ?>">
 								<span><small>Best Laid</small>Plans</span>
 							</a>

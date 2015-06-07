@@ -9,18 +9,12 @@ get_header();
 		
 		<div class="content">
 			
-			<?php if($C->isPageFeatureImage()): ?>
-			<div class="featureImage">
-				<?php echo $C->pageFeatureImage(); ?>
+			<div class="titleArea">
+				<h1><?php echo $C->pageTitle(); ?></h1>
+				<?php if($C->isPageMeta("page_details_subtitle")): ?>
+				<h2><?php echo $C->pageMeta("page_details_subtitle"); ?></h2>	
+				<?php endif; ?>
 			</div>
-			<?php endif; ?>
-			
-			<?php if($C->isPageMeta("page_details_subtitle")): ?>
-			<h2 class="pageTitle"><?php echo $C->pageMeta("page_details_subtitle"); ?></h2>
-			<?php else: ?>
-			<h2 class="pageTitle"><?php echo $C->pageTitle(); ?></h2>
-			<?php endif; ?>
-			
 			<?php echo $C->pageContent(); ?>
 			
 			<?php $C->pageForm(1,"mainContactForm"); ?>

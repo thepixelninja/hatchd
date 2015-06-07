@@ -12,7 +12,7 @@ $featureSlides = $C->pageFeature(0,0,1);
 		<article class="content">
 			
 			<?php if($post->post_type == "post"): ?>
-			<div class="date"><div><?php echo $C->postDate($post->ID); ?></div></div>
+			<div class="date egg"><?php echo $C->postDate($post->ID); ?></div>
 			<?php endif; ?>
 			
 			<div class="titleArea">
@@ -30,7 +30,7 @@ $featureSlides = $C->pageFeature(0,0,1);
 	
 	<div class="col-md-3">
 		
-		<?php //include("includes/sidebar.php"); ?>
+		<?php include("includes/sidebar.php"); ?>
 		
 	</div>
 

@@ -327,7 +327,7 @@ function initParalax(){
 	}
 
 	//grab the el
-	var paralax = $("#paralax");
+	var paralax = $("#featuredImage");
 
 	//set the speed and get height
 	var speed 	= 2;
@@ -401,12 +401,6 @@ function afterResize(){
 	switch(layout){
 
 		case "desktop":
-
-			//force load google comments
-			googleComments(true);
-
-			//fix the folio pods
-			moreInfo();
 
 		break;
 

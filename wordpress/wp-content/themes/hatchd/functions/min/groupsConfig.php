@@ -27,9 +27,6 @@ return array(
 		"$base/js/lightbox.min.js",
 		"$base/js/mobgal.min.js",
 		"$base/js/picturefill.js",
-		"$base/js/tracking.js",
-		"$base/js/fullscreen-polyfill.js",
-		"$base/js/isotope.js",
 		"$base/js/common.js"
 	)
 );
