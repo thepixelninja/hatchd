@@ -3,6 +3,8 @@
 global $C;
 //the post
 global $post;
+//the featured image
+$featuredImage = $C->pageFeatureImage(false,false,true);
 ?>
 <!DOCTYPE html>
 <!--[if IE 6]><html id="ie6" class="msie"><![endif]-->
@@ -34,11 +36,14 @@ global $post;
 	html {
 		width:100%;
 		height:100%;
-		background:#191919 url(<?php echo $C->themePath(); ?>/images/loading.gif) no-repeat center center;
+		background:#45626A url(<?php echo $C->themePath(); ?>/images/loading.gif) no-repeat center center;
 	}
 	#page,
 	#mainNav {
-		/*display:none;*/
+		opacity:0;
+		transition:all 1s;
+		-webkit-transition:all 1s;
+		-moz-transition:all 1s;
 	}
 </style>
 
@@ -52,58 +57,67 @@ global $post;
 
 <nav id="mainNav">
 
-	<i class="glyphicon glyphicon-align-justify" id="menuIcon"></i>
+	<i class="glyphicon glyphicon-menu-hamburger" id="menuIcon"></i>
 
 	<div id="menuTitle">
-		<h3>ThePixelNinja</h3>
+		<h3><?php echo $C->siteName(); ?></h3>
 	</div>
-
-	<?php echo $C->siteMenu(2,"list-unstyled"); ?>
+	
+	<div class="container">
+		<div class="row">
+			<div class="col-md-9 hidden-xs hidden-sm">
+				<a class="logo" href="<?php echo $C->sitePath(); ?>" title="<?php echo $C->siteTagline(); ?>">
+					<span><small>Best Laid</small>Plans</span>
+				</a>
+			</div>
+			<div class="col-md-3">
+				<?php echo $C->siteMenu(2,"list-unstyled"); ?>
+			</div>
+		</div>
+	</div>
 
 </nav>
 
 <div id="page">
 
-	<div id="siteSocial" class="socialButtons lightSocial clearfix">
-		<div class="buttonHolder">
-			<a class="st-icon-facebook st-icon-square" href="#" data-share="facebook" data-placement="left" data-url="<?php echo $C->sitePath(); ?>"></a>
-			<a class="st-icon-googleplus st-icon-square" href="#" data-share="google" data-placement="left" data-url="<?php echo $C->sitePath(); ?>"></a>
-			<a class="st-icon-twitter st-icon-square" href="#" data-share="twitter" data-placement="left" data-intent="follow" data-url="<?php echo $C->sitePath(); ?>"></a>
-		</div>
-	</div>
-
-	<div class="colorBar"></div>
-
 	<header>
-
-		<div class="container">
-
-			<div class="row">
-
-				<div class="col-md-12">
-
-					<div id="paralax">
-
-						<a id="logo" href="<?php echo $C->sitePath(); ?>" title="<?php echo $C->siteTagline(); ?>">
-							<?php echo $C->svg("the-pixel-ninja-logo.svg"); ?>
-						</a>
-						<h1><?php echo $C->pageTitle(); ?></h1>
-
+		
+		<div id="siteSocial" class="socialButtons clearfix st-shape-r4">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="pull-right">
+							<a class="st-icon-twitter" href="#">Follow us on Twitter</a>
+							<a class="st-icon-facebook" href="#">Follow us on Facebook</a>
+							<a class="st-icon-instagram" href="#">Follow us on Instagram</a>
+						</div>
 					</div>
-
 				</div>
-
 			</div>
-
+		</div>
+		
+		<div id="featuredImage" style="background-image:url(<?php echo $featuredImage; ?>);">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div id="paralax">
+							<a class="logo visible-xs visible-sm" href="<?php echo $C->sitePath(); ?>" title="<?php echo $C->siteTagline(); ?>">
+								<span><small>Best Laid</small>Plans</span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 
 	</header>
 
 	<div id="mainContent">
-
-		<?php if(!$C->pageTemplateIs("index")): ?>
+		
 		<div class="container">
-
-			<?php include("includes/bread.php"); ?>
-
-		<?php endif; ?>
+				
+			<div id="innerMainContent">
+	
+				<?php if(!$C->pageTemplateIs("index")): ?>
+				<?php include("includes/bread.php"); ?>
+				<?php endif; ?>

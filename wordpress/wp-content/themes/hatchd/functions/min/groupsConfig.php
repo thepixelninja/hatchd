@@ -15,10 +15,10 @@ $base = dirname(dirname(dirname(__FILE__)));
 
 return array(
 	"css" => array(
-		"$base/bootstrap/css/bootstrap.min.css",
+		"$base/bootstrap/css/bootstrap.css",
 		"$base/css/lightbox.css",
 		"$base/css/mobgal.css",
-		"$base/css/stackicons-social.css",
+		"$base/css/stackicons-min.css",
 		"$base/css/screen.css"
 	),
 	"js" => array(

@@ -58,16 +58,16 @@ img {
   max-width: 100%; }
 
 /*
- * STRUCTURE
+ * STRUCTURE AND MISC
  */
 html, body {
-  color: #425e66;
+  color: #45626A;
   overflow-x: hidden;
   height: 100%;
   width: 100%; }
 
 html {
-  background: #425e66 url(../images/loading.gif) no-repeat center center; }
+  background: #45626A; }
 
 body {
   height: auto;
@@ -76,7 +76,45 @@ body {
 
 #page,
 #mainNav {
-  display: block; }
+  opacity: 1; }
+
+.logo {
+  display: block;
+  width: 126px;
+  height: 180px;
+  background: #dd6c5c;
+  -webkit-border-radius: 50% 50% 50% 50%/60% 60% 40% 40%;
+  -moz-border-radius: 50% 50% 50% 50%/60% 60% 40% 40%;
+  -ms-border-radius: 50% 50% 50% 50%/60% 60% 40% 40%;
+  -o-border-radius: 50% 50% 50% 50%/60% 60% 40% 40%;
+  border-radius: 50% 50% 50% 50%/60% 60% 40% 40%;
+  margin: 0 auto;
+  color: #fde9d6 !important;
+  font-family: "Lobster", cursive;
+  position: relative;
+  text-align: center;
+  overflow: hidden; }
+  .logo span {
+    position: absolute;
+    bottom: 40px;
+    display: block;
+    width: 100%;
+    -webkit-text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
+    -moz-text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
+    -ms-text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
+    -o-text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
+    -webkit-transform: rotate(-10deg);
+    -moz-transform: rotate(-10deg);
+    -ms-transform: rotate(-10deg);
+    -o-transform: rotate(-10deg);
+    transform: rotate(-10deg);
+    font-size: 250%;
+    line-height: 0.9em; }
+    .logo span small {
+      font-size: 60%;
+      width: 100%;
+      display: inline-block; }
 
 #backToTop {
   -webkit-transition: all 1s;
@@ -87,8 +125,8 @@ body {
   position: fixed;
   bottom: 10px;
   right: 10px;
-  background: #425e66;
-  color: #dd6c5c;
+  background: #45626A;
+  color: #fde9d6;
   padding: 10px;
   font-size: 200%;
   cursor: pointer;
@@ -102,12 +140,12 @@ body {
 nav#mainNav {
   width: 250px;
   height: 100%;
-  color: #fff;
-  background: #333;
+  color: #fde9d6;
+  background: #45626A;
   position: fixed;
   top: 0px;
   left: -250px;
-  font-family: "Lobster", cursive;
+  font-family: "Source Sans Pro", Arial, Helvetica, sans-serif;
   text-transform: uppercase;
   z-index: 50;
   -webkit-transition: all 0.5s;
@@ -115,6 +153,11 @@ nav#mainNav {
   -ms-transition: all 0.5s;
   -o-transition: all 0.5s;
   transition: all 0.5s; }
+  nav#mainNav .logo {
+    position: absolute;
+    top: -170px;
+    width: 200px;
+    height: 250px; }
   nav#mainNav ul {
     list-style-type: none;
     padding: 0px;
@@ -123,12 +166,13 @@ nav#mainNav {
       width: 100%; }
       nav#mainNav ul li a {
         padding: 10px;
-        color: #fff !important;
+        color: #fde9d6 !important;
         display: block;
         text-decoration: none;
-        border-bottom: 2px solid red; }
+        border-bottom: 2px solid #314b52;
+        font-size: 120%; }
       nav#mainNav ul li a:hover {
-        background: red; }
+        background: #314b52; }
     nav#mainNav ul li.active > a {
       background: #dd6c5c; }
   nav#mainNav ul.children {
@@ -137,18 +181,30 @@ nav#mainNav {
     position: absolute;
     top: 0px;
     right: -50px;
-    color: #333;
-    padding: 10px;
+    color: #fde9d6;
+    padding: 11px;
     font-size: 200%;
     cursor: pointer;
-    background: rgba(255, 255, 255, 0.3);
-    display: block; }
+    background: #dd6c5c;
+    display: block;
+    width: 50px;
+    height: 50px;
+    text-align: center; }
   nav#mainNav #menuTitle {
-    border-bottom: 2px solid red;
-    padding: 10px; }
+    border-bottom: 2px solid #314b52;
+    padding: 10px;
+    -webkit-text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
+    -moz-text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
+    -ms-text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
+    -o-text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
+    background: #314b52; }
     nav#mainNav #menuTitle * {
       padding: 0px;
-      margin: 0px; }
+      margin: 0px;
+      font-family: "Lobster", cursive;
+      font-weight: 400;
+      font-size: 150%; }
 
 html.navOpen {
   background-image: none; }
@@ -158,6 +214,10 @@ html.navOpen {
   html.navOpen nav#mainNav {
     left: 0px; }
 
+@media screen and (max-width: 992px) {
+  nav#mainNav .container {
+    padding: 0px;
+    width: 100%; } }
 /*
  * SOCIAL BUTTONS
  */
@@ -166,14 +226,8 @@ html.navOpen {
   margin: 0 0 0 5px;
   width: 30px;
   height: 30px;
-  overflow: hidden;
   float: left;
-  display: block;
-  -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s;
-  -ms-transition: all 0.5s;
-  -o-transition: all 0.5s;
-  transition: all 0.5s; }
+  display: block; }
 .socialButtons a:first-child {
   margin: 0px; }
 .socialButtons a:before {
@@ -181,104 +235,47 @@ html.navOpen {
   font-size: 25px;
   left: 0px;
   top: 0px; }
-.socialButtons .popover {
-  width: 120px;
-  height: 45px;
-  text-align: center;
-  background: #333;
-  box-shadow: none; }
-.socialButtons .bottom .arrow:after {
-  border-bottom-color: #333; }
-.socialButtons .left .arrow:after {
-  border-left-color: #333; }
-.socialButtons .right .arrow:after {
-  border-right-color: #333; }
-.socialButtons .top .arrow:after {
-  border-top-color: #333; }
-
-.lightSocial a:before {
-  color: #fff !important; }
-
-.darkSocial a:before {
-  color: #333 !important; }
-
-.darkSocial a.st-icon-facebook:hover:before,
-.lightSocial a.st-icon-facebook:hover:before {
-  color: #3b5998 !important; }
-.darkSocial a.st-icon-googleplus:hover:before,
-.lightSocial a.st-icon-googleplus:hover:before {
-  color: #f2301c !important; }
-.darkSocial a.st-icon-twitter:hover:before,
-.lightSocial a.st-icon-twitter:hover:before {
-  color: #00bcf6 !important; }
+.socialButtons a:before,
+.socialButtons a:after {
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s; }
 
 /*
  * HEADER
  */
-#siteSocial {
-  background: #333;
-  padding: 10px; }
-  #siteSocial .buttonHolder {
-    float: right; }
-  #siteSocial .popover {
-    background: red; }
-  #siteSocial .bottom .arrow:after {
-    border-bottom-color: red; }
-  #siteSocial .left .arrow:after {
-    border-left-color: red; }
-  #siteSocial .right .arrow:after {
-    border-right-color: red; }
-  #siteSocial .top .arrow:after {
-    border-top-color: red; }
-
 header {
   width: 100%;
-  background: #dd6c5c;
-  padding: 100px 0;
+  background: #333;
   text-align: center;
-  color: #fff;
+  color: #fde9d6;
   position: relative;
   z-index: 1; }
-  header #logo {
-    display: block;
-    margin: 0 auto 20px auto;
-    width: 150px;
-    height: 108px;
-    overflow: hidden; }
-    header #logo svg {
-      width: 150px;
-      height: 108px;
-      display: block; }
-      header #logo svg * {
-        fill: #fff; }
-  header h1 {
-    border: 2px solid #fff;
-    padding: 10px 30px;
-    margin: 0px;
-    display: inline-block;
-    font-size: 180%;
-    max-width: 800px; }
-    header h1 small {
-      width: 100%;
-      display: block; }
-
-.index header {
-  background: #fff;
-  color: #333; }
-  .index header #logo {
-    background: url(../images/grid-repeat.svg) 100px 100px fixed;
-    background-size: 500px 313px; }
-  .index header h1 {
-    border: none;
-    border-top: 1px solid #333;
-    padding: 10px 0 0 0; }
+  header #siteSocial {
+    background: #45626A;
+    height: 50px;
+    overflow: hidden;
+    padding: 10px; }
+    header #siteSocial a:before,
+    header #siteSocial a:after {
+      color: #fde9d6; }
+    header #siteSocial a:hover:before,
+    header #siteSocial a:hover:after {
+      color: #dd6c5c; }
+  header #featuredImage {
+    background: center center no-repeat;
+    background-size: cover; }
+    header #featuredImage #paralax {
+      padding: 20px 0; }
 
 /*
  * FEATURE SLIDER
  */
 #featureSlider {
   background: #dd6c5c;
-  color: #fff; }
+  color: #fde9d6; }
   #featureSlider #slider {
     text-align: center;
     max-width: 700px;
@@ -287,7 +284,7 @@ header {
     #featureSlider #slider .carousel-indicators {
       padding: 0px; }
     #featureSlider #slider .carousel-inner {
-      border: 2px solid #fff; }
+      border: 2px solid #fde9d6; }
       #featureSlider #slider .carousel-inner .item {
         margin: 100px 10px; }
         #featureSlider #slider .carousel-inner .item h2 {
@@ -310,7 +307,7 @@ header {
  */
 #featuredPages {
   background: #333;
-  color: #fff;
+  color: #fde9d6;
   text-align: center; }
   #featuredPages .featuredPage {
     margin: 0 0 30px 0;
@@ -321,71 +318,6 @@ header {
       background-size: cover; }
   #featuredPages .col-md-4:last-child .featuredPage {
     border: none; }
-
-/*
- * LATEST PROJECT AND LATEST LAB
- */
-#latestLab,
-#latestProject {
-  background: #dd6c5c;
-  color: #fff;
-  overflow: hidden; }
-  #latestLab .projectInfo,
-  #latestProject .projectInfo {
-    margin: 0 0 20px 0;
-    width: 100%;
-    overflow: auto; }
-  #latestLab .thumb,
-  #latestProject .thumb {
-    display: block;
-    overflow: hidden;
-    max-height: 400px;
-    background: no-repeat center center;
-    background-size: cover; }
-    #latestLab .thumb img,
-    #latestProject .thumb img {
-      visibility: hidden;
-      opacity: 0; }
-  #latestLab h2,
-  #latestProject h2 {
-    padding-bottom: 5px;
-    border-bottom: 2px solid #fff; }
-  #latestLab p,
-  #latestProject p {
-    margin-bottom: 20px; }
-  #latestLab i,
-  #latestProject i {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    background: rgba(255, 255, 255, 0.3); }
-    #latestLab i svg,
-    #latestProject i svg {
-      width: 80px;
-      height: 80px; }
-      #latestLab i svg *,
-      #latestProject i svg * {
-        fill: #fff; }
-  #latestLab .circleIcon,
-  #latestProject .circleIcon {
-    background: url(../images/grid.svg) no-repeat;
-    background-size: cover; }
-    #latestLab .circleIcon span,
-    #latestProject .circleIcon span {
-      width: 300px;
-      height: 225px;
-      margin-top: -12.5px;
-      margin-left: -50px; }
-      #latestLab .circleIcon span svg,
-      #latestProject .circleIcon span svg {
-        width: 300px;
-        height: 225px; }
-
-.no-backgroundsize #latestProject .thumb {
-  background-image: none; }
-  .no-backgroundsize #latestProject .thumb img {
-    opacity: 1;
-    visibility: visible; }
 
 /*
  * SIDEBAR
@@ -479,38 +411,27 @@ header {
  * MAIN CONTENT
  */
 #mainContent {
-  position: relative;
-  padding: 100px 0;
-  z-index: 10; }
-  #mainContent .pixelate .top .square {
-    background: #fff; }
-  #mainContent .pixelate .bottom .square {
-    background: #dd6c5c; }
-  #mainContent .content {
-    float: left;
-    width: 100%;
-    position: relative; }
-    #mainContent .content .featureImage {
-      margin: 0 0 20px 0; }
-    #mainContent .content .pageTitle {
-      border-bottom: 5px solid blue;
-      margin: 0 0 20px 0;
-      padding: 0 0 15px 0; }
-      #mainContent .content .pageTitle span {
-        max-width: 80%;
-        display: inline-block; }
-    #mainContent .content #comments {
-      margin: 20px 0 40px 0;
+  background: #fff;
+  margin-bottom: -100px; }
+  #mainContent #innerMainContent {
+    padding: 20px;
+    background: #fff;
+    position: relative;
+    top: -100px;
+    z-index: 10; }
+    #mainContent #innerMainContent .content {
       float: left;
-      width: 100%; }
-    #mainContent .content #pageSocial {
       width: 100%;
-      float: left;
-      border-bottom: 5px solid blue;
-      position: relative;
-      top: -7px;
-      padding: 0 0 10px 0;
-      margin: 0 0 10px 0; }
+      position: relative; }
+      #mainContent #innerMainContent .content .titleArea {
+        margin: 0 0 20px 0; }
+        #mainContent #innerMainContent .content .titleArea * {
+          margin: 0px; }
+        #mainContent #innerMainContent .content .titleArea h1 {
+          font-size: 350%;
+          color: #dd6c5c; }
+        #mainContent #innerMainContent .content .titleArea h2 {
+          font-size: 250%; }
 
 /*
  * EDITABLE CONTENT
@@ -566,8 +487,8 @@ header {
   content: " \2192"; }
 
 .btn.btn-light {
-  border-color: #fff;
-  color: #fff !important; }
+  border-color: #fde9d6;
+  color: #fde9d6 !important; }
 
 .btn.loading {
   cursor: wait; }
@@ -744,36 +665,22 @@ body#hatchd .gform_wrapper form {
  */
 footer {
   background: #333;
-  color: #fff;
-  padding: 100px 0 0 0;
-  position: relative; }
-  footer .pixelate {
-    right: 0px; }
-    footer .pixelate .top .square {
-      background: #333; }
-    footer .pixelate .bottom .square {
-      background: #fff; }
-  footer .subFooter {
-    background: red;
-    color: blue;
-    padding: 10px 0;
-    margin: 100px 0 0 0;
-    font-family: "Lobster", cursive;
-    font-size: 80%; }
-    footer .subFooter .copyright {
-      padding: 5px;
-      display: inline-block; }
-    footer .subFooter ul {
-      margin: 0px;
-      padding: 0px; }
-      footer .subFooter ul li {
-        border-left: 1px solid blue; }
-        footer .subFooter ul li a {
-          color: blue !important; }
-      footer .subFooter ul li:first-child {
-        border: none; }
-  footer .custForm input, footer .custForm textarea, footer .custForm select {
-    background: transparent; }
+  color: #fde9d6;
+  padding: 10px 0;
+  font-family: "Lobster", cursive;
+  font-size: 80%; }
+  footer .copyright {
+    display: inline-block;
+    margin: 0 0 5px 0; }
+  footer ul {
+    margin: 0px;
+    padding: 0px; }
+    footer ul li {
+      border-left: 1px solid #fde9d6; }
+      footer ul li a {
+        color: #fde9d6 !important; }
+    footer ul li:first-child {
+      border: none; }
 
 /*----------DIFF SCREEN SIZES----------*/
 /*----------handle screen sizes--------//
@@ -797,22 +704,52 @@ smartphones portrait.
   .editableContent .gallery .gallery-item {
     width: 50%; } }
 /*---IPAD PORTRAIT---*/
-@media screen and (min-width: 768px) {
-  /*--HEADER--*/
-  header #logo {
-    width: 200px;
-    height: 140px; }
-    header #logo svg {
-      width: 200px;
-      height: 140px; }
-  header h1 {
-    font-size: 220%; }
-
-  /*--GALLERY--*/
-  #folioGal .imageHolder {
-    width: 50%; } }
 /*---CUST BOOTSTRAP---*/
 @media screen and (min-width: 992px) {
+  /*--MAIN NAV--*/
+  nav#mainNav {
+    position: absolute;
+    width: 100%;
+    top: 50px;
+    height: 50px;
+    left: 0px;
+    background: #fde9d6; }
+    nav#mainNav #menuIcon,
+    nav#mainNav #menuTitle {
+      display: none !important; }
+    nav#mainNav ul {
+      text-align: right;
+      margin: 0px;
+      padding: 10px 0; }
+      nav#mainNav ul li {
+        display: inline-block;
+        width: auto;
+        margin: 0 0 0 10px; }
+        nav#mainNav ul li a {
+          text-transform: none;
+          padding: 5px 10px;
+          -webkit-border-radius: 8px;
+          -moz-border-radius: 8px;
+          -ms-border-radius: 8px;
+          -o-border-radius: 8px;
+          border-radius: 8px;
+          color: #45626A !important;
+          border: none;
+          font-size: 100%; }
+      nav#mainNav ul li.active a,
+      nav#mainNav ul li:hover a {
+        color: #fde9d6 !important;
+        -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.6) inset;
+        -moz-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.6) inset;
+        -ms-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.6) inset;
+        -o-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.6) inset;
+        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.6) inset; }
+
+  /*--HEADER--*/
+  header #featuredImage #paralax {
+    height: 0px;
+    padding-bottom: 30%; }
+
   /*--SIDEBAR--*/
   #sideBar {
     border: none;
@@ -849,10 +786,6 @@ smartphones portrait.
         #sideBar .pod .podContent .podItem {
           border-bottom: 2px solid blue;
           padding: 10px 0px; }
-
-  #sideBar.leftSidebar {
-    border-right: 5px solid blue;
-    padding: 0px; }
 
   /*--FORMS--*/
   form .gform_body ul,
@@ -891,21 +824,24 @@ smartphones portrait.
     padding: 10px 20px 10px 0; }
 
   /*--EDITABLE CONTENT--*/
-  .editableContent .gallery .gallery-item {
-    width: 25%; }
+  .editableContent {
+    -webkit-columns: 2 20px;
+    -moz-columns: 2 20px;
+    -ms-columns: 2 20px;
+    -o-columns: 2 20px;
+    columns: 2 20px; }
+    .editableContent .gallery .gallery-item {
+      width: 25%; }
 
   /*--POSTLIST--*/
   .postList li .media p, .postList li .media h2 {
     width: 90%; }
 
   /*--FOOTER--*/
-  footer .footerText {
-    border-right: 5px solid red;
-    padding-right: 20px; }
   footer ul {
     float: right; }
-  footer .subFooter .copyright {
-    padding: 0px; } }
+  footer .copyright {
+    margin: 0px; } }
 /*---IPAD LANDSCAPE--*/
 /*---LARGE SCREENS---*/
 /*---EVEN LARGER SCREENS---*/

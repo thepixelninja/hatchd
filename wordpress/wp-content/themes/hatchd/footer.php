@@ -1,8 +1,8 @@
 <?php global $C; ?>
 
-		<?php if(!$C->pageTemplateIs("index")): ?>
+			</div>
+
 		</div>
-		<?php endif; ?>
 
 	</div>
 

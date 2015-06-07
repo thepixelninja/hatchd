@@ -728,7 +728,7 @@ class core {
 			";
 
 			if($link){
-				$bigInfo = wp_get_attachment_image_src($imgId,"full");
+				$bigInfo = wp_get_attachment_image_src($imgId,"full_web");
 				$image 	 = "<a class='lightBox' title='{$imgTitle}' href='{$bigInfo[0]}'>$image</a>";
 			}
 		}

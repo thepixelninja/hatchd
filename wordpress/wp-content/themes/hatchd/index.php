@@ -3,9 +3,40 @@
 get_header();
 //get the feature slides
 $featureSlides = $C->pageFeature(0,0,1);
-//get the featured pages
-$featuredPages = $C->siteFeaturedPages(true);
 ?>
+
+<div class="row">
+			
+	<div class="col-md-9">
+		
+		<article class="content">
+			
+			<?php if($post->post_type == "post"): ?>
+			<div class="date"><div><?php echo $C->postDate($post->ID); ?></div></div>
+			<?php endif; ?>
+			
+			<div class="titleArea">
+				<h1><?php echo $C->pageTitle(); ?></h1>
+				<?php if($C->isPageMeta("page_details_subtitle")): ?>
+				<h2><?php echo $C->pageMeta("page_details_subtitle"); ?></h2>	
+				<?php endif; ?>
+			</div>
+			
+			<?php echo $C->pageContent(); ?>
+			
+		</article>
+							
+	</div>
+	
+	<div class="col-md-3">
+		
+		<?php //include("includes/sidebar.php"); ?>
+		
+	</div>
+
+</div>
+
+<?php /*
 
 <?php if(!empty($featureSlides)): ?>
 <section id="featureSlider">
@@ -36,5 +67,7 @@ $featuredPages = $C->siteFeaturedPages(true);
 
 </section>
 <?php endif; ?>
+ * 
+*/ ?>
 
 <?php get_footer(); ?>

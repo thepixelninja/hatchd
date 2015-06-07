@@ -1,0 +1,11 @@
+# Handle home page
+Redirect 301 /home/home http://dev.local/hatchd
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /hatchd/
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /hatchd/index.php [L]
+</IfModule>
