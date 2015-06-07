@@ -1,0 +1,29 @@
+* {
+	padding:0px;
+	margin:0px;
+	font-family:Arial, Helvetica, sans-serif;
+}
+
+body {
+	background:#333;
+	color:#fff;
+	padding:50px;
+}
+
+p {
+	padding:0 0 10px 0;
+}
+
+a {
+	color:#fff !important;
+}
+
+#floatDiv {
+	width:180px;
+	height:180px;
+	background:#0395A9;
+	font-size:150%;
+	font-weight:bold;
+	margin:40px auto;
+	padding:10px;
+} 

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="utf-8"/>
+
+<title>Paralax website jquery plugin example</title>
+
+<!--[if lt IE 9]>
+<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script type="text/javascript" src="js/paralax.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+
+<link rel="stylesheet" href="css/common.css" type="text/css" />
+
+</head>
+
+<body class="nojs">
+	
+<nav>
+	
+	<ul>
+		<li><a href="#page1">Page 1</a></li>
+		<li><a href="#page2">Page 2</a></li>
+	</ul>
+	
+</nav>
+	
+<section class="spacer page">
+	
+	<div class="intro">
+		<h1>jQuery paralax plugin website example</h1>
+		<p>This is a paralax plugin I wrote for a site called battleback1000.co.uk. I also used it on my homepage.</p>
+		<p>Its easy to set up and works both horizontally and vertically.</p>
+		<p>The paralax elements speed and position can be set using data-top and data-left attributes. They dont have to be absolut positioned like other paralax plugins.
+		Just style them naturally and the plugin will do the rest.</p>
+		<p>Just click a nav item above to see the plugin in action. Ps. The bg images are pretty large so if you see red it means they havn't loaded yet.</p>
+	</div>
+	
+	<div class="element test">
+		Im a test block
+	</div>
+	
+</section>
+	
+<section id="page1" class="clearFloat page">
+	
+	<div class="container">
+	
+		<header class="element debug">
+			<hgroup>
+				<h1>Header here</h1>
+			</hgroup>
+		</header>
+		
+		<div class="leftCol element">
+			<h2>Left Col</h2>
+			<ul>
+				<li>Nullam congue.</li>
+				<li>Nullam congue Aliquam at ipsum odio.</li>
+				<li>Nullam congue.</li>
+				<li>Nullam congue Aliquam at ipsum odio.</li>
+				<li>Nullam congue.</li>
+				<li>Nullam congue Aliquam at ipsum odio.</li>
+				<li>Nullam congue.</li>
+				<li>Nullam congue Aliquam at ipsum odio.</li>
+				<li>Nullam congue.</li>
+				<li>Nullam congue Aliquam at ipsum odio.</li>
+				<li>Nullam congue.</li>
+				<li>Nullam congue Aliquam at ipsum odio.</li>
+			</ul>
+		</div>
+		
+		<div class="content element">
+			<h2>Content</h2>
+			<p>Nullam congue sodales nisi semper ultricies. Aliquam at ipsum odio, eu hendrerit tellus. Cras leo erat; euismod id ultricies id, commodo vitae quam. 
+			Cras imperdiet euismod magna. Fusce et quam nisl! Morbi scelerisque justo a massa facilisis ullamcorper? Pellentesque habitant morbi tristique 
+			senectus et netus et malesuada fames ac turpis egestas. Curabitur viverra elementum nunc sed sodales.</p>
+	
+			<p>Pellentesque congue dictum sollicitudin. Aenean egestas rhoncus molestie. Vivamus varius tincidunt consectetur. Donec mauris est, porta et scelerisque vel, 
+			placerat eget dui? Vestibulum ullamcorper neque vestibulum sem lobortis sodales convallis orci egestas. Cras cursus mollis semper! Sed volutpat leo quis 
+			dolor ultricies pellentesque? In hac habitasse platea dictumst. Curabitur convallis ultricies est, at malesuada purus malesuada et. Sed interdum nisi 
+			quis mauris cursus ac fringilla velit scelerisque? Aliquam condimentum viverra leo non condimentum. Proin viverra magna a libero adipiscing nec ultricies 
+			erat aliquet. In hac habitasse platea dictumst.</p>
+				
+			<p>Ut sit amet tincidunt lorem. Suspendisse non tellus nisl, ut tempus neque. Curabitur arcu nibh, venenatis ut convallis non, laoreet sed ipsum. Sed nec gravida massa. 
+			Morbi porttitor mauris erat, in dignissim purus. Integer dignissim; lacus et dignissim mollis, enim libero posuere ligula; a gravida tellus lacus at velit? 
+			Etiam tristique ante a mauris porta ac faucibus nulla porttitor. Fusce mollis lectus in magna convallis mattis. Maecenas ultrices molestie felis, ultrices 
+			tristique diam porta in. Vivamus ultrices, felis et bibendum posuere, lectus lacus pulvinar turpis; at mollis lectus nisi nec massa. Vivamus interdum urna 
+			eget diam aliquet sit amet iaculis mi elementum. Pellentesque posuere faucibus magna. Pellentesque dictum orci quis mi ultricies sit amet vehicula lacus malesuada.</p>
+		</div>
+		
+		<div class="rightCol element">
+			<h2>Right Col</h2>
+			<p>Ut sit amet tincidunt lorem. Suspendisse non tellus nisl, ut tempus neque. Curabitur arcu nibh, venenatis ut convallis non, laoreet sed ipsum. Sed nec gravida massa. 
+			Morbi porttitor mauris erat, in dignissim purus. Integer dignissim; lacus et dignissim mollis, enim libero posuere ligula; a gravida tellus lacus at velit? 
+			Etiam tristique ante a mauris porta ac faucibus nulla porttitor. Fusce mollis lectus in magna convallis mattis. Maecenas ultrices molestie felis, ultrices 
+			tristique diam porta in. Vivamus ultrices, felis et bibendum posuere, lectus lacus pulvinar turpis; at mollis lectus nisi nec massa. Vivamus interdum urna 
+			eget diam aliquet sit amet iaculis mi elementum. Pellentesque posuere faucibus magna. Pellentesque dictum orci quis mi ultricies sit amet vehicula lacus malesuada.</p>
+		</div>
+		
+		<footer class="element">
+			<h2>Footer</h2>
+			<p>Ut sit amet tincidunt lorem. Suspendisse non tellus nisl, ut tempus neque.</p>
+		</footer>
+	
+	</div>
+	
+	<div class="element decor decor1" data-top="-700" data-left="900"></div>
+	<div class="element decor decor2" data-top="1000" data-left="100"></div>
+	
+</section>
+
+<section id="page2" class="clearFloat page">
+	
+	<div class="container">
+	
+		<header class="element">
+			<hgroup>
+				<h1>Header here</h1>
+			</hgroup>
+		</header>
+		
+		<div class="leftCol element">
+			<h2>Left Col</h2>
+			<ul>
+				<li>Nullam congue.</li>
+				<li>Nullam congue Aliquam at ipsum odio.</li>
+				<li>Nullam congue.</li>
+				<li>Nullam congue Aliquam at ipsum odio.</li>
+				<li>Nullam congue.</li>
+				<li>Nullam congue Aliquam at ipsum odio.</li>
+				<li>Nullam congue.</li>
+				<li>Nullam congue Aliquam at ipsum odio.</li>
+				<li>Nullam congue.</li>
+				<li>Nullam congue Aliquam at ipsum odio.</li>
+				<li>Nullam congue.</li>
+				<li>Nullam congue Aliquam at ipsum odio.</li>
+			</ul>
+		</div>
+		
+		<div class="content element">
+			<h2>Content</h2>
+			<p>Nullam congue sodales nisi semper ultricies. Aliquam at ipsum odio, eu hendrerit tellus. Cras leo erat; euismod id ultricies id, commodo vitae quam. 
+			Cras imperdiet euismod magna. Fusce et quam nisl! Morbi scelerisque justo a massa facilisis ullamcorper? Pellentesque habitant morbi tristique 
+			senectus et netus et malesuada fames ac turpis egestas. Curabitur viverra elementum nunc sed sodales.</p>
+	
+			<p>Pellentesque congue dictum sollicitudin. Aenean egestas rhoncus molestie. Vivamus varius tincidunt consectetur. Donec mauris est, porta et scelerisque vel, 
+			placerat eget dui? Vestibulum ullamcorper neque vestibulum sem lobortis sodales convallis orci egestas. Cras cursus mollis semper! Sed volutpat leo quis 
+			dolor ultricies pellentesque? In hac habitasse platea dictumst. Curabitur convallis ultricies est, at malesuada purus malesuada et. Sed interdum nisi 
+			quis mauris cursus ac fringilla velit scelerisque? Aliquam condimentum viverra leo non condimentum. Proin viverra magna a libero adipiscing nec ultricies 
+			erat aliquet. In hac habitasse platea dictumst.</p>
+				
+			<p>Ut sit amet tincidunt lorem. Suspendisse non tellus nisl, ut tempus neque. Curabitur arcu nibh, venenatis ut convallis non, laoreet sed ipsum. Sed nec gravida massa. 
+			Morbi porttitor mauris erat, in dignissim purus. Integer dignissim; lacus et dignissim mollis, enim libero posuere ligula; a gravida tellus lacus at velit? 
+			Etiam tristique ante a mauris porta ac faucibus nulla porttitor. Fusce mollis lectus in magna convallis mattis. Maecenas ultrices molestie felis, ultrices 
+			tristique diam porta in. Vivamus ultrices, felis et bibendum posuere, lectus lacus pulvinar turpis; at mollis lectus nisi nec massa. Vivamus interdum urna 
+			eget diam aliquet sit amet iaculis mi elementum. Pellentesque posuere faucibus magna. Pellentesque dictum orci quis mi ultricies sit amet vehicula lacus malesuada.</p>
+		</div>
+		
+		<div class="rightCol element">
+			<h2>Right Col</h2>
+			<p>Ut sit amet tincidunt lorem. Suspendisse non tellus nisl, ut tempus neque. Curabitur arcu nibh, venenatis ut convallis non, laoreet sed ipsum. Sed nec gravida massa. 
+			Morbi porttitor mauris erat, in dignissim purus. Integer dignissim; lacus et dignissim mollis, enim libero posuere ligula; a gravida tellus lacus at velit? 
+			Etiam tristique ante a mauris porta ac faucibus nulla porttitor. Fusce mollis lectus in magna convallis mattis. Maecenas ultrices molestie felis, ultrices 
+			tristique diam porta in. Vivamus ultrices, felis et bibendum posuere, lectus lacus pulvinar turpis; at mollis lectus nisi nec massa. Vivamus interdum urna 
+			eget diam aliquet sit amet iaculis mi elementum. Pellentesque posuere faucibus magna. Pellentesque dictum orci quis mi ultricies sit amet vehicula lacus malesuada.</p>
+		</div>
+		
+		<footer class="element">
+			<h2>Footer</h2>
+			<p>Ut sit amet tincidunt lorem. Suspendisse non tellus nisl, ut tempus neque.</p>
+		</footer>
+	
+	</div>
+	
+</section>
+
+<section class="spacer"></section>
+
+</body>
+
+</html>
