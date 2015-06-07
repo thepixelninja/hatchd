@@ -425,31 +425,21 @@ header {
  */
 
 #featureSlider {
-  background:$primaryBrandColor;
   color:$lightColor;
   #slider {
     text-align:center;
-    max-width:700px;
-    width:90%;
     margin:0 auto;
     .carousel-indicators {
       padding:0px;
     }
     .carousel-inner {
-      border:2px solid $lightColor;
       .item {
-        margin:100px 10px;
-        h2 {
-          font-size:300%;
-          @include word-break();
-          small {
-            width:100%;
-            font-size:50%;
-            display:block;
-          }
-          span {
-            display:block;
-          }
+        .featureSlide {
+          display:block;
+          height:0px;
+          padding-bottom:30%;
+          background:no-repeat center center;
+          background-size:cover;
         }
       }
     }
@@ -617,6 +607,7 @@ header {
   }
   .gallery {
     width:100%;
+    margin:0 0 20px 0;
     .gallery-item {
       border:1px solid #fff;
       width:100%;
@@ -959,6 +950,13 @@ smartphones portrait.
         padding-bottom:30%;
       }
     }
+    #featureSlider {
+      #slider {
+        .carousel-indicators {
+          bottom:100px;
+        }
+      }
+    }
   }
   
   /*--MAIN CONTENT--*/
@@ -1067,9 +1065,6 @@ smartphones portrait.
   .index, .page {
     .editableContent {
       @include cols(2,20px);
-      .gallery .gallery-item {
-        width:25%;
-      }
     }
   }
 

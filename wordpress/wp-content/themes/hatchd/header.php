@@ -5,6 +5,8 @@ global $C;
 global $post;
 //the featured image
 $featuredImage = $C->pageFeatureImage(false,false,true);
+//the featured slides
+$featureSlides = $C->pageFeature(false,false,true);
 ?>
 <!DOCTYPE html>
 <!--[if IE 6]><html id="ie6" class="msie"><![endif]-->
@@ -96,6 +98,33 @@ $featuredImage = $C->pageFeatureImage(false,false,true);
 			</div>
 		</div>
 		
+		<?php if($C->pageTemplateIs("index") && !empty($featureSlides)): ?>
+		
+		<section id="featureSlider">
+			<div id="slider" class="carousel slide" data-ride="carousel">
+		
+				<div class="carousel-inner">
+		
+					<?php foreach($featureSlides as $key => $slide): ?>
+					<div class="item <?php if($key == 0): ?>active<?php endif; ?>">
+						<a class="featureSlide" style="background-image:url(<?php echo $slide["image"][0]; ?>);" title="<?php echo $slide["title"]; ?>" href="<?php echo $slide["link"]; ?>">
+							<span class="sr-only"><?php echo $slide["title"]; ?></span>
+						</a>
+					</div>
+					<?php endforeach; ?>
+		
+				</div>
+		
+				<ol class="carousel-indicators">
+					<?php foreach($featureSlides as $key => $slide): ?>
+					<li data-target="#slider" data-slide-to="<?php echo $key; ?>" <?php if($key == 0): ?>class="active"<?php endif; ?>></li>
+					<?php endforeach; ?>
+				</ol>
+		
+			</div>
+		</section>
+	
+		<?php else: ?>
 		<?php if($featuredImage != ""): ?>
 		<div id="featuredImage" style="background-image:url(<?php echo $featuredImage; ?>);">
 		<?php else: ?>
@@ -113,6 +142,7 @@ $featuredImage = $C->pageFeatureImage(false,false,true);
 				</div>
 			</div>
 		</div>
+		<?php endif; ?>
 
 	</header>
 

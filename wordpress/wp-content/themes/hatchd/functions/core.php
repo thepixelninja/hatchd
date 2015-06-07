@@ -651,7 +651,7 @@ class core {
 			$id = $post->ID;
 		}
 
-		$slides = $this->pageGroup("feature_slide",$id);
+		$slides = $this->pageGroup("feature_slides",$id);
 
 		if(empty($slides)){
 			return false;
@@ -661,7 +661,7 @@ class core {
 
 		$i = 0;
 		foreach($slides as $key => $slide){
-			$feature[$i]["text"]  = $slide["feature_slide_text"][1];
+			$feature[$i]["title"] = $slide["feature_slide_title"][1];
 			$feature[$i]["link"]  = $slide["feature_slide_link"][1];
 			$feature[$i]["image"] = $this->getImage($imgIDs[$key-1],"full_web",true);
 			$feature[$i]["thumb"] = $this->getImage($imgIDs[$key-1],"square_thumb",true);

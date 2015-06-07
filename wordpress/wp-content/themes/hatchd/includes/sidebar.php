@@ -163,4 +163,20 @@ wp_reset_postdata();
 	</div>
 	<?php endif; ?>
 	
+	<div class="pod navPod">
+		
+		<div class="podTitle">
+			<h3>Twitter Feed Here</h3>
+		</div>
+		
+		<nav class="podContent sideNav">
+			<ul class="list-unstyled">
+				<li><a href="#" title="tweet title here">Im a tweet @tweetyMcTweeterson</a></li>
+				<li><a href="#" title="tweet title here">Aint twitter cool</a></li>
+				<li><a href="#" title="tweet title here">This could be anything (as long as it involves eggs)</a></li>
+			</ul>
+		</nav>
+		
+	</div>
+	
 </aside>

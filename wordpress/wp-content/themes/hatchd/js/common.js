@@ -327,7 +327,7 @@ function initParalax(){
 	}
 
 	//grab the el
-	var paralax = $("#featuredImage");
+	var paralax = $("#featuredImage, #featureSlider");
 
 	//set the speed and get height
 	var speed 	= 2;

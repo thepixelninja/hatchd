@@ -29,7 +29,7 @@ global $post;
 	
 	<div class="col-md-3">
 		
-		<?php //include("includes/sidebar.php"); ?>
+		<?php include("includes/sidebar.php"); ?>
 		
 	</div>
 

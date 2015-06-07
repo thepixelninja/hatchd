@@ -282,33 +282,18 @@ header {
  * FEATURE SLIDER
  */
 #featureSlider {
-  background: #dd6c5c;
   color: #f8f3ef; }
   #featureSlider #slider {
     text-align: center;
-    max-width: 700px;
-    width: 90%;
     margin: 0 auto; }
     #featureSlider #slider .carousel-indicators {
       padding: 0px; }
-    #featureSlider #slider .carousel-inner {
-      border: 2px solid #f8f3ef; }
-      #featureSlider #slider .carousel-inner .item {
-        margin: 100px 10px; }
-        #featureSlider #slider .carousel-inner .item h2 {
-          font-size: 300%;
-          -ms-word-break: break-all;
-          word-break: break-all;
-          word-break: break-word;
-          -webkit-hyphens: auto;
-          -moz-hyphens: auto;
-          hyphens: auto; }
-          #featureSlider #slider .carousel-inner .item h2 small {
-            width: 100%;
-            font-size: 50%;
-            display: block; }
-          #featureSlider #slider .carousel-inner .item h2 span {
-            display: block; }
+    #featureSlider #slider .carousel-inner .item .featureSlide {
+      display: block;
+      height: 0px;
+      padding-bottom: 30%;
+      background: no-repeat center center;
+      background-size: cover; }
 
 /*
  * SIDEBAR
@@ -436,7 +421,8 @@ header {
     margin: 20px 0;
     padding: 0 0 0 15px; }
   .editableContent .gallery {
-    width: 100%; }
+    width: 100%;
+    margin: 0 0 20px 0; }
     .editableContent .gallery .gallery-item {
       border: 1px solid #fff;
       width: 100%; }
@@ -737,6 +723,8 @@ smartphones portrait.
   header #featuredImage #innerFeatured {
     height: 0px;
     padding-bottom: 30%; }
+  header #featureSlider #slider .carousel-indicators {
+    bottom: 100px; }
 
   /*--MAIN CONTENT--*/
   #mainContent {
@@ -824,8 +812,6 @@ smartphones portrait.
     -ms-columns: 2 20px;
     -o-columns: 2 20px;
     columns: 2 20px; }
-    .index .editableContent .gallery .gallery-item, .page .editableContent .gallery .gallery-item {
-      width: 25%; }
 
   /*--POSTLIST--*/
   .postList li .media p, .postList li .media h2 {
