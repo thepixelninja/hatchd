@@ -34,7 +34,7 @@ switch($server){
 		/** MySQL database username */
 		define('DB_USER','hatchd');
 		/** MySQL database password */
-		define('DB_PASSWORD','');
+		define('DB_PASSWORD','SQMY7Z2ZTs7rfcVh');
 		/** MySQL hostname */
 		define('DB_HOST','localhost');
 }
