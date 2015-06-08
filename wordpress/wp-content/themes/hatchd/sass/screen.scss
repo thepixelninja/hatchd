@@ -342,7 +342,7 @@ html.navOpen {
   background-image:none;
   #page {
     left:250px;
-    opacity:0.5;
+    opacity:0.5 !important;
   }
   nav#mainNav {
     left:0px;
@@ -439,6 +439,8 @@ header {
     }
     .carousel-inner {
       .item {
+        max-height:500px;
+        overflow:hidden;
         .featureSlide {
           display:block;
           height:0px;
@@ -955,9 +957,11 @@ smartphones portrait.
  
   header {
     #featuredImage {
+      max-height:500px;
+      overflow:hidden;
       #innerFeatured {
-        height:0px;
         padding-bottom:40%;
+        max-height:500px;
       }
     }
     #featureSlider {

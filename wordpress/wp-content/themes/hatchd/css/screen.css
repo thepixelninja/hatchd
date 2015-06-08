@@ -211,7 +211,7 @@ html.navOpen {
   background-image: none; }
   html.navOpen #page {
     left: 250px;
-    opacity: 0.5; }
+    opacity: 0.5 !important; }
   html.navOpen nav#mainNav {
     left: 0px; }
 
@@ -285,12 +285,15 @@ header {
     margin: 0 auto; }
     #featureSlider #slider .carousel-indicators {
       padding: 0px; }
-    #featureSlider #slider .carousel-inner .item .featureSlide {
-      display: block;
-      height: 0px;
-      padding-bottom: 40%;
-      background: no-repeat center center;
-      background-size: cover; }
+    #featureSlider #slider .carousel-inner .item {
+      max-height: 500px;
+      overflow: hidden; }
+      #featureSlider #slider .carousel-inner .item .featureSlide {
+        display: block;
+        height: 0px;
+        padding-bottom: 40%;
+        background: no-repeat center center;
+        background-size: cover; }
 
 /*
  * SIDEBAR
@@ -721,9 +724,12 @@ smartphones portrait.
         box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.6) inset; }
 
   /*--HEADER--*/
-  header #featuredImage #innerFeatured {
-    height: 0px;
-    padding-bottom: 40%; }
+  header #featuredImage {
+    max-height: 500px;
+    overflow: hidden; }
+    header #featuredImage #innerFeatured {
+      padding-bottom: 40%;
+      max-height: 500px; }
   header #featureSlider #slider .carousel-indicators {
     bottom: 100px; }
 

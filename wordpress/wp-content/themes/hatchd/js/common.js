@@ -108,7 +108,10 @@ function loadAssets(){
 		active : function(){
 			//check all the images have loaded
 			onImagesLoaded("body",function(){
-				page.css("opacity",1);
+				page.css("display","block");
+				setTimeout(function(){
+					page.css("opacity",1);
+				},500);
 			});
 		},
     	google : {

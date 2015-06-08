@@ -43,6 +43,7 @@ $featureSlides = $C->pageFeature(false,false,true);
 	#page,
 	#mainNav {
 		opacity:0;
+		display:none;
 		transition:all 1s;
 		-webkit-transition:all 1s;
 		-moz-transition:all 1s;
