@@ -58,6 +58,18 @@ $featureSlides = $C->pageFeature(false,false,true);
 
 <div id="fb-root"></div>
 
+<div id="preload">
+	<?php if($featuredImage != ""): ?>
+	<img src="<?php echo $featuredImage; ?>" alt="preload"/>	
+	<?php endif; ?>
+	<?php if(!empty($featureSlides)): ?>
+	<?php foreach($featureSlides as $slide): ?>
+	<img src="<?php echo $slide["image"][0]; ?>" alt="preload"/>	
+	<?php endforeach; ?>
+	<?php endif; ?>
+	<img src="<?php echo $C->themePath(); ?>/images/default-featured-image.jpg" alt="preload"/>
+</div>
+
 <nav id="mainNav">
 
 	<i class="glyphicon glyphicon-menu-hamburger" id="menuIcon"></i>

@@ -210,6 +210,13 @@ body {
   //opacity:1;
 }
 
+#preload {
+  overflow:hidden;
+  opacity:0;
+  width:0px;
+  height:0px;
+}
+
 .logo {
   display:block; 
   width:126px; 
