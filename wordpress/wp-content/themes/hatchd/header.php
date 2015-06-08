@@ -90,6 +90,7 @@ $featureSlides = $C->pageFeature(false,false,true);
 				<div class="row">
 					<div class="col-md-12">
 						<div class="pull-right">
+							<a id="eggsplosion" href="#">Eggsplosion!</a>
 							<a class="st-icon-twitter" href="#">Follow us on Twitter</a>
 							<a class="st-icon-facebook" href="#">Follow us on Facebook</a>
 							<a class="st-icon-instagram" href="#">Follow us on Instagram</a>

@@ -265,6 +265,35 @@ header {
     header #siteSocial a:hover:before,
     header #siteSocial a:hover:after {
       color: #dd6c5c; }
+    header #siteSocial a#eggsplosion {
+      width: auto;
+      height: auto;
+      background: #dd6c5c;
+      color: #f8f3ef !important;
+      padding: 5px 10px;
+      -webkit-border-radius: 8px;
+      -moz-border-radius: 8px;
+      -ms-border-radius: 8px;
+      -o-border-radius: 8px;
+      border-radius: 8px;
+      -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.6) inset;
+      -moz-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.6) inset;
+      -ms-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.6) inset;
+      -o-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.6) inset;
+      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.6) inset;
+      text-decoration: none;
+      font-size: 80%;
+      font-family: "Source Sans Pro", Arial, Helvetica, sans-serif;
+      text-transform: uppercase;
+      margin: 0 10px 0 0;
+      -webkit-transition: all 0.5s;
+      -moz-transition: all 0.5s;
+      -ms-transition: all 0.5s;
+      -o-transition: all 0.5s;
+      transition: all 0.5s; }
+    header #siteSocial a#eggsplosion:hover {
+      background: #f8f3ef;
+      color: #dd6c5c !important; }
   header #featuredImage {
     background: center center no-repeat;
     background-size: cover; }

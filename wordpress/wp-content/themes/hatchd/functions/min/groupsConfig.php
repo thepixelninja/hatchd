@@ -28,6 +28,7 @@ return array(
 		"$base/js/mobgal.min.js",
 		"$base/js/picturefill.js",
 		"$base/js/fryed.googlemap.js",
+		"$base/js/eggs.js",
 		"$base/js/common.js"
 	)
 );

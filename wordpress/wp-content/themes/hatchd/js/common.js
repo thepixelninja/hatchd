@@ -93,6 +93,12 @@ function init(){
 	
 	//remove loading once we are ready
 	loadAssets();
+	
+	//the eggs easter egg
+	$("#eggsplosion").on("click",function(e){
+		e.preventDefault();
+		eggs.init();
+	});
 
 }
 
