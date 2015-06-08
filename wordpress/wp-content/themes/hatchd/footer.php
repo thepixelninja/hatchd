@@ -34,13 +34,13 @@
 
 <div id="layoutDetector" class="hidden-xs hidden-sm"></div>
 
-<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lobster|Source+Sans+Pro:400,300,600,300italic,400italic,600italic" type="text/css"/>
 <link rel="stylesheet" href="<?php echo $C->themePath(); ?>/functions/min/?g=css" type="text/css"/>
 
 <script type="text/javascript">
 	window.themePath = "<?php echo $C->themePath(); ?>";
 </script>
 <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/webfont/1/webfont.js"></script>
 <script type="text/javascript" src="<?php echo $C->themePath(); ?>/functions/min/?g=js"></script>
 
 <!--[if lt IE 9]>

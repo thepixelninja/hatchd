@@ -81,7 +81,41 @@ function init(){
 
 	//init ajax forms
 	ajaxForms();
+	
+	//init google maps
+	$("#googleMap").fryedGooglemap({
+		postcode 	: "Eggville, MS 38857 USA",
+		width	 	: "100%",
+		height	 	: 400,
+		directions 	: false,
+		zoom		: 12
+	});
+	
+	//remove loading once we are ready
+	loadAssets();
 
+}
+
+/*------------LOAD ASSETS-------------*/
+
+function loadAssets(){
+	
+	//grab the page
+	var page = $("#mainNav, #page");
+	
+	//load up the google web fonts
+	WebFont.load({
+		active : function(){
+			//check all the images have loaded
+			onImagesLoaded("body",function(){
+				page.css("opacity",1);
+			});
+		},
+    	google : {
+      		families : ["Lobster","Source Sans Pro"]
+    	}
+	});
+	
 }
 
 /*---------------MAIN NAV-------------*/
@@ -462,7 +496,8 @@ function imageCover(el){
 /*-----RUN ONCE IMAGES HAVE LOADED----*/
 
 function onImagesLoaded(el,callback){
-
+	
+	var el		= $(el);
 	var images  = el.find("img");
 	var imgNo   = images.length;
 	var	counter = 0;

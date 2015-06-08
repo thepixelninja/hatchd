@@ -27,6 +27,7 @@ return array(
 		"$base/js/lightbox.min.js",
 		"$base/js/mobgal.min.js",
 		"$base/js/picturefill.js",
+		"$base/js/fryed.googlemap.js",
 		"$base/js/common.js"
 	)
 );

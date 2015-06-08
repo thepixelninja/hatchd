@@ -130,6 +130,9 @@ $featureSlides = $C->pageFeature(false,false,true);
 		<?php else: ?>
 		<div id="featuredImage" style="background-image:url(<?php echo $C->themePath(); ?>/images/default-featured-image.jpg);">	
 		<?php endif; ?>
+		<?php if($C->pageTemplateIs("contact")): ?>
+		<div id="googleMap"></div>
+		<?php else: ?>
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12">
@@ -142,6 +145,7 @@ $featureSlides = $C->pageFeature(false,false,true);
 				</div>
 			</div>
 		</div>
+		<?php endif; ?>
 		<?php endif; ?>
 
 	</header>

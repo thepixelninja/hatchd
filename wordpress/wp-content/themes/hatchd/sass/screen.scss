@@ -196,7 +196,7 @@ html,body {
 }
 
 html {
-   background:$secondaryBrandColor;
+   //background:$secondaryBrandColor;
 }
 
 body {
@@ -207,7 +207,7 @@ body {
 
 #page,
 #mainNav {
-  opacity:1;
+  //opacity:1;
 }
 
 .logo {
@@ -417,6 +417,11 @@ header {
     #innerFeatured {
       padding:20px 0;
     }
+    #googleMap {
+      width:100%;
+      height:100%;
+      background:$darkColor;
+    }
   }
 }
 
@@ -437,7 +442,7 @@ header {
         .featureSlide {
           display:block;
           height:0px;
-          padding-bottom:30%;
+          padding-bottom:40%;
           background:no-repeat center center;
           background-size:cover;
         }
@@ -759,6 +764,11 @@ body#hatchd .gform_wrapper form {
   color:$primaryBrandColor !important;
 }
 
+.custMessage {
+  width:100%;
+  float:left;
+}
+
 /*
  * POST LIST
  */
@@ -947,7 +957,7 @@ smartphones portrait.
     #featuredImage {
       #innerFeatured {
         height:0px;
-        padding-bottom:30%;
+        padding-bottom:40%;
       }
     }
     #featureSlider {
@@ -962,7 +972,6 @@ smartphones portrait.
   /*--MAIN CONTENT--*/
  
   #mainContent {
-    margin-bottom:-100px;
     #innerMainContent {
       top:-100px;
     }
