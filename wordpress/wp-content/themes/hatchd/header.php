@@ -48,6 +48,12 @@ $featureSlides = $C->pageFeature(false,false,true);
 		-webkit-transition:all 1s;
 		-moz-transition:all 1s;
 	}
+	#preload {
+		width:0px;
+		height:0px;
+		overflow:hidden;
+		opacity:0;
+	}
 </style>
 
 <?php wp_head(); ?>
